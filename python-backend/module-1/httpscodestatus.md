@@ -74,3 +74,24 @@
 - [HTTP Status Codes - W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
 - [HTTP Status Codes - IETF](https://www.ietf.org/rfc/rfc7231.txt)
 - [HTTP Status Codes - IANA](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
+
+
+## Query Methods
+- **GET**: The GET method requests a representation of the specified resource. Requests using GET should only retrieve data and should have no other effect. (This is also known as a "safe" method.)
+- **HEAD**: The HEAD method asks for a response identical to that of a GET request, but without the response body. This is useful for retrieving meta-information written in response headers, without having to transport the entire content.
+- **POST**: The POST method submits an entity to the specified resource, often causing a change in state or side effects on the server.
+- **PUT**: The PUT method replaces all current representations of the target resource with the request payload.
+- **DELETE**: The DELETE method deletes the specified resource.
+- **CONNECT**: The CONNECT method establishes a tunnel to the server identified by the target resource.
+- **OPTIONS**: The OPTIONS method is used to describe the communication options for the target resource. Clients can discover methods supported by a web server by using an OPTIONS request. This can be used to check the functionality of a web server by requesting '*' instead of a specific resource.
+- **TRACE**: The TRACE method performs a message loop-back test along the path to the target resource, providing a useful debugging mechanism.
+- **PATCH**: The PATCH method is used to apply partial modifications to a resource. It is not idempotent, meaning that successive identical PATCH requests may have different effects. It is used when you want to update a resource partially, rather than replacing the entire resource as with PUT. PATCH is often used in RESTful APIs to update specific fields of a resource without sending the entire resource representation.  
+
+
+## Domain , DNS and TLD Names
+- **Domain Name**: A domain name is a human-readable address used to access websites on the internet. It consists of two main parts: the second-level domain (SLD) and the top-level domain (TLD). For example, in "example.com", "example" is the SLD, and ".com" is the TLD.
+- **DNS (Domain Name System)**: DNS is a hierarchical and decentralized naming system that translates human-readable domain names into IP addresses, allowing browsers to locate and access websites. It acts like a phonebook for the internet, enabling users to use easy-to-remember names instead of numerical IP addresses.
+- **TLD (Top-Level Domain)**: A TLD is the last segment of a domain name, located after the final dot. Common TLDs include .com, .org, .net, and country-code TLDs like .uk or .jp. TLDs are managed by the Internet Assigned Numbers Authority (IANA) and are categorized into generic TLDs (gTLDs) and country-code TLDs (ccTLDs).
+- **Subdomain**: A subdomain is a domain that is part of a larger domain. It is created by adding a prefix to the main domain name. For example, in "blog.example.com", "blog" is a subdomain of "example.com". Subdomains are often used to organize and separate different sections of a website.
+- **URL (Uniform Resource Locator)**: A URL is the complete web address used to access a specific resource on the internet. It includes the protocol (e.g., http or https), the domain name, and optionally a path, query parameters, and fragment identifiers. For example, "https://www.example.com/path/to/resource?query=param#section" is a URL that specifies the protocol, domain, path, query parameters, and fragment.
+- **IP Address**: An IP address is a unique numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. It serves two main functions: identifying the host or network interface and providing the location of the host in the network. IP addresses can be either IPv4 (e.g., 192.168.1.1) or IPv6 (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
