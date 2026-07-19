@@ -66,7 +66,7 @@ for i in range(1, n+1):
 ```
 - Time: **O(N*M)**
 
-## Inner loop that halves each time
+## Inner loop that halves each time ## doubt 
 ```python
 for i in range(1, n+1):
     j = n
