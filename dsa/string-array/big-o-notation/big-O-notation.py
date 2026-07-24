@@ -50,5 +50,13 @@ while i <=n:
 
 
 
-# 
+#  GP
+
+def geometric_work(N):
+    for i in range(1, N + 1):          # Outer loop runs N times
+        work_units = 2**i              # 2^1, 2^2, 2^3, ..., 2^N
+        
+        for j in range(work_units):    # Inner loop scales exponentially
+            # O(1) Constant time operation
+            print(j)
 
