@@ -32,39 +32,7 @@ arr = [-2,0,3,-5,2,-1]
 
 #  =========================== optimize version ======================================
 
-# class prefixSum:
-#     def __init__(self,sums,queries):
-#         self.sums = sums
-#         self.prefix_sum = [0] * len(sums)
-#         self.queries = queries
-#         # print(self.prefix_sum)
-#         for i in range(len(queries)):
-#             # print(queries[i])
-#             self.sumRange(queries[i][0],queries[i][1])
 
-
-#     def sumRange(self,left,right):
-#         print(left,right)
-#         result = [None]
-#         sum =0
-
-#         for j in range(right,left -1 ):
-
-#             # print(self.sums[j])
-#             if(left==0):
-#                 sum += self.sums[j]
-#             else:
-#                 pass
-#                 # sum += (self.sums[right] + self.sums[left - 1])
-#         print(sum)
-                
-#         result.append(sum)
-#         # print(result)
-#         return result
-
-# obj = prefixSum(arr,queries)
-
-# print(obj)
 
 
 class NumArray:
