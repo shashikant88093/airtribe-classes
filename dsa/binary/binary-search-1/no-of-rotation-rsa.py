@@ -15,4 +15,4 @@ def noRSA(arr):
 print(noRSA(arr))
 
 
-# number is gotation 
+# number is gota
