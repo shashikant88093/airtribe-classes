@@ -1,21 +1,36 @@
 # https://leetcode.com/problems/asteroid-collision/description/
 
 
-ast = [5,10,-5]
 
 # algo. 
 #  + + no collision
 #  + -  collision
 #  - + no collision
 #  - - no collision
-stack =[]
-def asteriod_collision(arr):
-    stack = [0]*len(arr)
+def asteriod_collision(list):
+    stack =[]
+    
+    for char in list:
+        # print(char)
+        if (char >0):
+            stack.append(char)
+        else:
+            if not stack:
+                return False
+            top=stack[-1]
+            if top <= abs(char):
+                stack.pop()
 
-    print(stack)
+
+    return stack
 
 
 
-
+# ast = [5,10,-5]
+# ast = [8,-8]
+ast = [3,5,-6,2,-1,4]
 
 asteriod_collision(ast)
+
+# print(stack)
+
