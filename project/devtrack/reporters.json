@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Connor",
+    "email": "sarah@cyberdyne.io",
+    "team": "backend"
+  },
+  {
+    "id": 2,
+    "name": "Shashikant Kumar",
+    "email": "sarah@cyberdyne.io",
+    "team": "backend"
+  }
+]

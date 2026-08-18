@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  db:
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    container_name: devtrack_db
+    restart: always
+    environment:
+      POSTGRES_DB: devtrack_db
+      POSTGRES_USER: devtrack_user
+      POSTGRES_PASSWORD: devtrack_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U devtrack_user -d devtrack_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build:
+      context: ./devtrack
+      dockerfile: Dockerfile
+    container_name: devtrack_web
+    restart: always
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_NAME=devtrack_db
+      - DB_USER=devtrack_user
+      - DB_PASSWORD=devtrack_password
+      - DB_HOST=db
+      - DB_PORT=5432
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  postgres_data:
