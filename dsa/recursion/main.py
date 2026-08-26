@@ -1,23 +1,38 @@
-# def pd(n):
-#     print(n)
-
-#     if n ==0:
-#         return 0
-#     else:
-
-#         pd(n-1)
-
-
-# pd(10) # 10,9,8,7,6,5,4,3,2,1,0
-
-
-def pi(n):
-    if n==0:
-        return
-    pi(n-1)
-    print(n) # 1,2,3
-
-pi(5)
-
+# how work 1234
+# how work 4321
 
 # how work 123321
+
+def PI(n): # print Incresing
+    
+    if n==0:
+        return
+    PI(n-1)
+    print(n) 
+
+
+def PD(n): # print Decreasing
+    
+    if n==0:
+        return
+    print(n) 
+    
+    PD(n-1)
+
+def PDI(n): # print Decreasing
+    
+    if n==0:
+        return
+    print(n) 
+    
+    PDI(n-1)
+    print(n) 
+
+
+PI(5)
+print("########### PI" )
+
+PD(5)
+print("########### PD")
+PDI(5)
+print("########### PDI")

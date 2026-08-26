@@ -1,9 +1,9 @@
-def factorial(n):
-    if n ==1:
-        return 1
-    mul = factorial(n-1)
-    mul = mul * n
-    return mul
+def fact(n):
+    if n <=1 :
+        return n
+    
+    top = n
+    prod = top * fact(n-1)
+    return prod
 
-
-print(factorial(5))
+print(fact(9))
